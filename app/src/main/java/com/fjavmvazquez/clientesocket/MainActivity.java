@@ -46,10 +46,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ejecutarCliente() {
-        String ip = "192.168.137.1";
+        String ip = "192.168.0.106";//"192.168.137.1";
         int puerto = 23;
         log("Conectado a traves de Socket: " + ip + " Puerto: " + puerto);
         try{
+            /*
+                Esta clase implementa sockets de clientes.
+                Un socket es un end point para la comunicación entre dos máquinas.
+             */
+
             Socket cliente = new Socket(ip, puerto);
             //Creamos un canal o puente para transferir la información
            // BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
