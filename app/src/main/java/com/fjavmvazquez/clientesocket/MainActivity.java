@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ejecutarCliente() {
-        String ip = "192.168.0.106";//"192.168.137.1";
-        int puerto = 23;
+        String ip = "172.25.13.20";
+        int puerto = 8089;
         log("Conectado a traves de Socket: " + ip + " Puerto: " + puerto);
         try{
             /*
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             salida.writeUTF(msj);
             salida.flush();
             //Mensaje devuelto por el servidor
-            log("Mensaje recibido del servidor: " + entrada.readLine());
+            log("Mensaje recibido del servidor: " + entrada.read());
             cliente.close();
         }
         catch (Exception ex){
